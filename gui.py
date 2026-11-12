@@ -90,6 +90,7 @@ surah_info.pack(pady=20)
 
 
 # Get Random Verse Function
+
 def get_verse():
 
     try:
@@ -98,7 +99,17 @@ def get_verse():
         response = requests.get(url, timeout=15)
         response.raise_for_status()
 
-        data = response.json()["data"]
+        result = response.json()
+
+        if result.get("code") != 200:
+            status.config(text="Unable to load verse. Try again!")
+            return
+
+        data = result["data"]
+
+        if len(data) != 3:
+            status.config(text="Verse data is incomplete!")
+            return
 
         arabic.config(text=data[0]["text"])
         english.config(text=data[1]["text"])
@@ -116,6 +127,8 @@ def get_verse():
     except requests.exceptions.RequestException:
         status.config(text="Connection problem! Please try again.")
 
+    except (KeyError, IndexError, TypeError, ValueError):
+        status.config(text="Invalid data received from API!")
 
 # New Verse Button
 new_button = tk.Button(
