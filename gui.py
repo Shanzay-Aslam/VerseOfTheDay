@@ -130,6 +130,23 @@ def get_verse():
     except (KeyError, IndexError, TypeError, ValueError):
         status.config(text="Invalid data received from API!")
 
+
+# Copy Verse Function
+def copy_verse():
+    verse_text = (
+        f"Arabic:\n{arabic.cget('text')}\n\n"
+        f"English:\n{english.cget('text')}\n\n"
+        f"Urdu:\n{urdu.cget('text')}\n\n"
+        f"{surah_info.cget('text')}"
+    )
+
+    root.clipboard_clear()
+    root.clipboard_append(verse_text)
+    root.update()
+
+    status.config(text="Verse copied successfully!")
+
+
 # New Verse Button
 new_button = tk.Button(
     root,
@@ -146,6 +163,22 @@ new_button = tk.Button(
     command=get_verse
 )
 new_button.pack(pady=5)
+
+
+# Copy Verse Button
+copy_button = tk.Button(
+    root,
+    text="Copy Verse",
+    font=("Arial", 11, "bold"),
+    bg="#D8CDBA",
+    fg="#315C46",
+    padx=25,
+    pady=8,
+    relief="flat",
+    cursor="hand2",
+    command=copy_verse
+)
+copy_button.pack(pady=5)
 
 # Exit Button
 exit_button = tk.Button(
