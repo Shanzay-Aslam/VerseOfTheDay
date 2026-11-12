@@ -118,29 +118,30 @@ python gui.py
 5. Click **Exit** to close the application.
 
 ## Sample Output
-
-The following is an example of how the command-line application displays a verse.
-
-```text
 ===== VERSE OF THE DAY =====
-
 1. Get a New Verse
 2. Exit
 
 Enter your choice: 1
 
 Arabic:
-[Arabic verse appears here]
+إِلَّا مَنِ ٱسْتَرَقَ ٱلسَّمْعَ فَأَتْبَعَهُۥ شِهَابٌۭ مُّبِينٌۭ
 
 English:
-[English translation appears here]
+so that anyone who seeks to learn [the unknowable] by stealth is pursued by a flame clear to see.
 
 Urdu:
-[Urdu translation appears here]
+ہاں اگر کوئی چوری سے سننا چاہے تو چمکتا ہوا انگارہ اس کے پیچھے لپکتا ہے
 
-Surah: [Surah Name]
-Ayah Number: [Ayah Number]
-```
+Surah: Al-Hijr
+Ayah Number: 18
+
+===== VERSE OF THE DAY =====
+1. Get a New Verse
+2. Exit
+
+Enter your choice: 2
+Thank you for using Verse of the Day!
 
 *Note: The actual verse, translations, Surah name, and Ayah number are retrieved randomly from the API.*
 
