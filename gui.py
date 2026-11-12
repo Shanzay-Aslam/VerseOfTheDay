@@ -147,6 +147,23 @@ new_button = tk.Button(
 )
 new_button.pack(pady=5)
 
+# Exit Button
+exit_button = tk.Button(
+    root,
+    text="Exit",
+    font=("Arial", 11, "bold"),
+    bg="#8B3A3A",
+    fg="white",
+    activebackground="#6B2929",
+    activeforeground="white",
+    padx=25,
+    pady=8,
+    relief="flat",
+    cursor="hand2",
+    command=root.destroy
+)
+exit_button.pack(pady=5)
+
 # Status
 status = tk.Label(
     root,
