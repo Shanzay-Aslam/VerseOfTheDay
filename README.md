@@ -1,157 +1,187 @@
+# Verse of the Day
 
-# ☪ Verse of the Day – Quran Verse Application
+A Python application that fetches random Quranic verses and displays them in Arabic, English, and Urdu using the AlQuran Cloud API.
 
-## 1. Project Overview
+## Project Overview
 
-Verse of the Day is a Python-based application that provides users with random verses from the Holy Quran.
+Verse of the Day is a beginner-friendly Python project that allows users to explore random Quranic verses with translations in three languages.
 
-The application retrieves Quranic verses through the AlQuran Cloud API and displays the original Arabic text along with English and Urdu translations.
+The project includes two versions:
+- **Command-Line Interface (CLI):** Displays verses through the terminal.
+- **Graphical User Interface (GUI):** Displays verses in a simple and user-friendly desktop application.
 
-The main purpose of this project is to make Quranic verses easily accessible while practicing Python programming, API integration, and graphical user interface development.
+## Project Objectives
 
-The application is available in two versions:
-- Command-Line Interface (CLI)
-- Graphical User Interface (GUI)
+- Learn how to work with a public API using Python.
+- Understand how to send HTTP requests using the Requests library.
+- Display JSON data in Python.
+- Handle API and internet connection errors.
+- Build a desktop application using Tkinter.
 
-## 2. Project Objectives
+## Features
 
-The main objectives of this project are:
+- Fetches random Quranic verses from a live API.
+- Displays Arabic text.
+- Provides English translation.
+- Provides Urdu translation.
+- Shows Surah name and Ayah number.
+- Allows users to fetch a new verse.
+- Includes a copy verse feature in the GUI.
+- Provides error handling for connection and API problems.
+- Offers both CLI and GUI versions.
 
-- To understand how APIs work.
-- To retrieve real-time data using Python.
-- To practice sending HTTP requests using the Requests library.
-- To display Quranic verses in multiple languages.
-- To develop a simple and user-friendly GUI.
-- To improve Python programming and problem-solving skills.
+## Technologies Used
 
-## 3. Key Features
+- **Programming Language:** Python
+- **API:** AlQuran Cloud API
+- **Library:** Requests
+- **GUI Framework:** Tkinter
+- **Version Control:** Git and GitHub
+- **Code Editor:** Visual Studio Code
 
-### Arabic Quran Verses
-Displays the original Arabic text of randomly selected Quranic verses.
+## API Integration
 
-### English Translation
-Provides an English translation to help users understand the meaning of each verse.
+This project uses the AlQuran Cloud API to retrieve random Quranic verses.
 
-### Urdu Translation
-Displays Urdu translations for Urdu-speaking users.
-
-### Surah Information
-Shows the English name of the Surah and the corresponding Ayah number.
-
-### Random Verse Generator
-Fetches a new random Quranic verse whenever the user selects the New Verse option.
-
-### Command-Line Version
-Allows users to access Quranic verses directly through the terminal.
-
-### Graphical User Interface
-Provides an attractive and simple interface with a dedicated verse display area and interactive button.
-
-### Error Handling
-Handles API connection problems and displays an error message if the request fails.
-
-## 4. Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| Python | Main programming language |
-| Tkinter | GUI development |
-| Requests | Sending HTTP requests |
-| AlQuran Cloud API | Retrieving Quranic verses |
-| VS Code | Development environment |
-
-## 5. API Integration
-
-This project uses the AlQuran Cloud API to retrieve Quranic data.
-
-API Endpoint:
+**API Endpoint:**
 
 https://api.alquran.cloud/v1/ayah/random/editions/quran-uthmani,en.asad,ur.jalandhry
 
-The API provides three editions:
+The API provides:
+- Quranic Arabic text
+- English translation
+- Urdu translation
+- Surah name
+- Ayah number
 
-- quran-uthmani – Arabic Quran text
-- en.asad – English translation
-- ur.jalandhry – Urdu translation
+## Project Structure
 
-The application sends a GET request to the API and receives the response in JSON format.
-
-Python processes the returned data and displays the verse and its information.
-
-## 6. Project Structure
-
+```text
 VerseOfTheDay/
 │
-├── main.py       # Command-line application
-├── gui.py        # Graphical user interface
-└── README.md     # Project documentation
+├── main.py
+├── gui.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-## 7. Installation Requirements
+## Installation
 
-Before running the application, make sure you have:
+Follow these steps to run the project on your computer.
 
-- Python installed on your computer.
-- An active internet connection.
-- Visual Studio Code or another Python editor.
+### Step 1: Clone the Repository
 
-Install the required Python library:
+```bash
+git clone https://github.com/Shanzay-Aslam/VerseOfTheDay.git
+```
 
-pip install requests
+### Step 2: Open the Project Folder
 
-Note: Tkinter is included with most standard Windows Python installations.
+```bash
+cd VerseOfTheDay
+```
 
-## 8. How to Run the Project
+### Step 3: Install Required Dependencies
 
-### Run the Command-Line Version
+```bash
+python -m pip install -r requirements.txt
+```
 
-Open the project folder in VS Code.
+### Step 4: Run the Command-Line Version
 
-Open the terminal and execute:
-
+```bash
 python main.py
+```
 
-Select option 1 to get a new verse.
+### Step 5: Run the GUI Version
 
-Select option 2 to exit the application.
-
-### Run the GUI Version
-
-Open the terminal and execute:
-
+```bash
 python gui.py
+```
 
-The application window will open and automatically display a Quranic verse.
+## How to Use
 
-Click the New Verse button to retrieve another random verse.
+### Command-Line Version
 
-## 9. Error Handling
+1. Run `main.py`.
+2. Select option 1 to get a new verse.
+3. The application displays the verse in Arabic, English, and Urdu.
+4. Select option 2 to exit the application.
 
-The application includes basic error handling to manage API connection issues.
+### Graphical User Interface
 
-If the internet connection is unavailable or the API request fails, the application displays an appropriate error message instead of stopping unexpectedly.
+1. Run `gui.py`.
+2. Click the **New Verse** button.
+3. The application displays a random Quranic verse with its translations.
+4. Click **Copy Verse** to copy the displayed verse.
+5. Click **Exit** to close the application.
 
+## Sample Output
 
-## 10. Learning Outcomes
+The following is an example of how the command-line application displays a verse.
 
-Through this project, I gained practical experience in:
+```text
+===== VERSE OF THE DAY =====
 
-- Python programming fundamentals.
-- Working with external APIs.
-- Sending GET requests using Requests.
-- Processing JSON responses.
-- Using functions and loops.
-- Implementing exception handling.
-- Developing GUI applications with Tkinter.
+1. Get a New Verse
+2. Exit
 
-## 11. Conclusion
+Enter your choice: 1
 
-Verse of the Day is a simple and useful Python application that combines Quranic content with practical programming concepts.
+Arabic:
+[Arabic verse appears here]
 
-This project helped me understand API integration, data handling, and GUI development while building an application with real-world functionality.
+English:
+[English translation appears here]
 
-## 12. Credits
+Urdu:
+[Urdu translation appears here]
 
-Quranic data provided by:
+Surah: [Surah Name]
+Ayah Number: [Ayah Number]
+```
 
-AlQuran Cloud API  
-https://alquran.cloud/
+*Note: The actual verse, translations, Surah name, and Ayah number are retrieved randomly from the API.*
+
+## Error Handling
+
+The application includes basic error handling to manage:
+
+- Internet connection problems.
+- API request failures.
+- Invalid or incomplete API responses.
+- Unexpected data formats.
+
+If a connection or API problem occurs, the application displays an appropriate error message.
+
+## Commit History
+
+This project was developed through five meaningful Git commits to track the development process and improvements.
+
+1. **Initial commit:** Create Verse of the Day project.
+2. **Add project dependencies:** Add the requirements file.
+3. **Improve API response validation and error handling:** Make API handling more reliable.
+4. **Add exit button to GUI application:** Add an exit option to the graphical interface.
+5. **Add copy verse feature to GUI:** Allow users to copy the displayed verse.
+
+## Learning Outcomes
+
+Through this project, I learned:
+
+- How to use a public API in Python.
+- How to send GET requests using the Requests library.
+- How to process JSON responses.
+- How to use exception handling.
+- How to create a desktop GUI using Tkinter.
+- How to use Git and GitHub for project version control.
+
+## Conclusion
+
+Verse of the Day is a Python-based application developed to retrieve and display Quranic verses in three languages. This project helped me improve my Python programming, API integration, error handling, and GUI development skills.
+
+## Credits
+
+- **API Provider:** [AlQuran Cloud](https://alquran.cloud/)
+- **Developer:** Shanzay Aslam
+- **GitHub Repository:** [VerseOfTheDay](https://github.com/Shanzay-Aslam/VerseOfTheDay)
